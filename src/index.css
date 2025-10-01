@@ -1,0 +1,171 @@
+/* Tailwind CDN for development */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Map Container Styles */
+.map-container {
+  transition: all 0.3s ease-in-out;
+}
+
+.zoom-high .leaflet-tile {
+  transition: filter 0.5s ease-in-out;
+  filter: saturate(1.2) contrast(1.1);
+}
+
+/* Popup Styling */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content {
+  margin: 8px;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Popup Styles */
+.weather-popup .leaflet-popup-content-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(203, 213, 225, 0.5);
+}
+
+.aqi-popup .leaflet-popup-content-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.wildfire-popup .leaflet-popup-content-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-left: 3px solid #ef4444;
+}
+
+.rainfall-popup .leaflet-popup-content-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-left: 3px solid #3b82f6;
+}
+
+.location-popup .leaflet-popup-content-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-left: 3px solid #3b82f6;
+}
+
+/* Animation Classes */
+.animate-fadeOut {
+  animation: fadeOut 1.5s ease-in-out forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-in-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Weather Icons Animation */
+.weather-icon {
+  transition: all 0.3s ease-in-out;
+}
+
+.weather-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Weather Animation Effects */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Rain particles animation */
+.rain-animation > div {
+  animation: rain-fall linear forwards;
+}
+
+@keyframes rain-fall {
+  to {
+    transform: translateY(calc(100vh + 20px));
+  }
+}
+
+/* Snow particles animation */
+.snow-animation > div {
+  animation: snow-fall linear infinite;
+}
+
+@keyframes snow-fall {
+  to {
+    transform: translateY(calc(100vh + 20px)) translateX(20px);
+  }
+}
+
+/* Fog particles animation */
+.fog-animation > div {
+  animation: fog-drift linear infinite;
+}
+
+@keyframes fog-drift {
+  to {
+    transform: translateX(calc(100vw + 100px));
+  }
+}
