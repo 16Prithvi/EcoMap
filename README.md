@@ -8,10 +8,11 @@
 
 ### Overview 
 1) The core of EcoMap is its interactive map interface, shown here centered on the user's location in Hubballi. Leveraging a powerful mapping API, the application provides a detailed and responsive base layer, setting the stage for the visualization of real-time environmental data. This view highlights the clean UI and the intuitive starting point for analysis.
-![alt text](image.png)
+<img width="1728" height="864" alt="Screenshot 2025-10-01 220350" src="https://github.com/user-attachments/assets/d84af181-c81f-488a-be51-f0b5473a8499" />
+
 
 2)This screenshot showcases EcoMap's primary functionality: fetching and displaying multiple live data layers via external APIs. The user can interact with the control panel on the right to toggle various environmental metrics, including Air Quality, Wildfires, and Rainfall. On the left, clear, color-coded legends automatically appear, allowing the user to easily interpret the live data being visualized on the map.
-<img width="1728" height="864" alt="Screenshot 2025-10-01 220350" src="https://github.com/user-attachments/assets/d84af181-c81f-488a-be51-f0b5473a8499" />
+![alt text](image.png)
 
 ### Prerequisites
 Ensure you have the following installed:
